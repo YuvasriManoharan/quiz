@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="animated-bg">
+        <div class="shape shape1"></div>
+        <div class="shape shape2"></div>
+        <div class="shape shape3"></div>
+        <div class="shape shape4"></div>
+        <div class="shape shape5"></div>
+    </div>
+    <div class="container">
+        <div id="name-input-container">
+            <input type="text" id="user-name" placeholder="Enter your name">
+            <button id="start-quiz">Start Quiz</button>
+        </div>
+       
+        <div id="quiz-container" style="display: none;">
+            <div id="timer">30</div>
+            <div id="progress">
+                <div id="progress-text">0%</div> <!-- Optional text to show progress percentage -->
+            </div>
+            
+            <div id="score">Score: 0</div>
+            <div id="question-number">Question 1</div>
+            <div id="question">Your question here</div>
+            <div id="options">
+                <!-- Options will be dynamically added here -->
+            </div>
+            <button id="hint">Show Hint</button>
+            <button id="submit">Submit Answer</button>
+            <div id="hint-text"></div>
+           
+            <ul id="leaderboard-list"></ul>
+        </div>
+        <div id="end-screen" style="display: none;">
+            <h2>Quiz Over! Your score: <span id="final-score">0</span></h2>
+            <div id="summary-screen" style="display: none;">
+            <h2>Quiz Summary</h2>
+            <div id="summary-content"></div></div>
+            <button id="restart-quiz">Restart Quiz</button>
+            <button id="finish">Finish</button>
+        </div>
+    </div>
+    <audio id="correct-sound" src="correct.mp3"></audio>
+    <audio id="incorrect-sound" src="incorrect.mp3"></audio>
+    <audio id="timer-warning-sound" src="time-warning.mp3"></audio>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
